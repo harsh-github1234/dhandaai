@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grow your small business with digital marketing services from Dhandaai by DigitalBloom. Expert Google Business Profile setup, website design, online branding, and SEO for local shops and businesses. Free visibility audit available.">
+    <meta name="keywords" content="digital marketing for small businesses, Google Business Profile setup, local business online marketing, small business website design, affordable digital marketing services, social media marketing for shops, online branding for local businesses, business growth through digital marketing, SEO for local shops, digital marketing agency India">
+    <title>Dhandaai by DigitalBloom - Digital Marketing for Small Businesses</title>
+    <link rel="icon" href="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eb1476d1-7fc9-405b-b7d5-64525471bc81.png" alt="Dhandaai logo icon representing digital growth for businesses">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        #whatsapp-float, #cta-float {
+            position: fixed;
+            z-index: 1000;
+        }
+        #whatsapp-float {
+            bottom: 20px;
+            right: 20px;
+        }
+        #cta-float {
+            bottom: 20px;
+            left: 20px;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .section-padding {
+            padding: 4rem 0;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .process-step {
+            position: relative;
+        }
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -50px;
+            width: 100px;
+            height: 2px;
+            background: #667eea;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 768px) {
+            .hero-h1 { font-size: 2.5rem; }
+            .process-step:not(:last-child)::after { display: none; }
+        }
+        .testimonial-card {
+            background: #f9f9f9;
+            border-left: 5px solid #667eea;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .pricing-card {
+            border: 1px solid #e2e8f0;
+            transition: border-color 0.3s;
+        }
+        .pricing-card:hover {
+            border-color: #667eea;
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        .blog-link:hover {
+            color: #667eea;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-gray-800">Dhandaai<span class="text-sm text-gray-500"> by DigitalBloom</span></h1>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                    <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+                    <li><a href="#why" class="hover:text-blue-600">Why Us</a></li>
+                    <li><a href="#process" class="hover:text-blue-600">Process</a></li>
+                    <li><a href="#portfolio" class="hover:text-blue-600">Portfolio</a></li>
+                    <li><a href="#pricing" class="hover:text-blue-600">Pricing</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+                </ul>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <ul class="px-4 py-4 space-y-2">
+                <li><a href="#home" class="block hover:text-blue-600">Home</a></li>
+                <li><a href="#about" class="block hover:text-blue-600">About</a></li>
+                <li><a href="#services" class="block hover:text-blue-600">Services</a></li>
+                <li><a href="#why" class="block hover:text-blue-600">Why Us</a></li>
+                <li><a href="#process" class="block hover:text-blue-600">Process</a></li>
+                <li><a href="#portfolio" class="block hover:text-blue-600">Portfolio</a></li>
+                <li><a href="#pricing" class="block hover:text-blue-600">Pricing</a></li>
+                <li><a href="#contact" class="block hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white pt-24 section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="hero-h1 text-4xl md:text-6xl font-bold mb-4">Grow Your Local Business 10x Faster with Smart Digital Marketing</h1>
+            <p class="text-xl md:text-2xl mb-8">We help small businesses and local shops get more customers through Google & Social Media.</p>
+            <p class="text-lg mb-8">We help small businesses and local shops go digital by creating their Google Business Profile, simple websites, and online branding. Our services include business setup, website design, creatives, and marketing support — everything needed to grow online. Get started with a free 15-min visibility audit today.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 mb-8">
+                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-lg">Get Free Audit</a>
+                <a href="tel:9161140248" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg">Book a Call</a>
+                <a href="#pricing" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg">Grow My Business Now</a>
+            </div>
+            <div class="contact-info">
+                <p class="text-lg mb-2"><i class="fas fa-phone"></i> Call Now: <a href="tel:9161140248" class="underline">9161140248</a></p>
+                <p class="text-lg"><i class="fas fa-envelope"></i> Email: <a href="mailto:harshkamal001@gmail.com" class="underline">harshkamal001@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">About Dhandaai by DigitalBloom</h2>
+                <p class="text-gray-600 mt-4">Empowering local businesses with cutting-edge digital solutions</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
+                    <p class="mb-4">At Dhandaai by DigitalBloom, we specialize in helping small businesses and local shops go digital effortlessly. From Google Business Profile setup to affordable website design and comprehensive online branding, we provide end-to-end digital marketing services tailored for growth.</p>
+                    <p class="mb-4">Our vision is to make digital marketing accessible and effective for every local business owner in India, bridging the gap between traditional shops and online success through smart, data-driven strategies.</p>
+                    <p>Our mission drives us to deliver affordable, high-impact solutions that increase visibility, attract more customers, and fuel sustainable business growth online.</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ad30fa7b-a93f-4df4-8721-1eba090854b6.png" alt="Professional digital marketing consultant discussing business growth strategy with a local shop owner in a modern office setting with laptops and charts" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-100 section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
+                <p class="text-gray-600 mt-4">Tailored digital marketing packages to boost your local business</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-search text-blue-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Google My Business Boost</h3>
+                    <p class="text-gray-600">Complete listing setup, optimization, and top ranking on Google searches for local discovery.</p>
+                    <a href="#pricing" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded">Get Started</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-users text-green-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Social Media Growth</h3>
+                    <p class="text-gray-600">Daily strategic posts, engaging content, and targeted ad campaigns to expand your audience.</p>
+                    <a href="#pricing" class="mt-4 inline-block bg-green-500 text-white py-2 px-4 rounded">Get Started</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-globe text-purple-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Web Design & SEO</h3>
+                    <p class="text-gray-600">Professional, responsive website design with integrated SEO for better Google visibility.</p>
+                    <a href="#pricing" class="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded">Get Started</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-rocket text-red-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Full Growth Plan</h3>
+                    <p class="text-gray-600">Comprehensive premium package: Ads, SEO, branding for maximum online business expansion.</p>
+                    <a href="#pricing" class="mt-4 inline-block bg-red-500 text-white py-2 px-4 rounded">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why" class="bg-white section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Why Choose Dhandaai by DigitalBloom?</h2>
+                <p class="text-gray-600 mt-4">What sets us apart in digital marketing for small businesses</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-clock text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">24x7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock assistance for all your digital marketing queries and needs.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-money-bill-wave text-green-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Affordable Plans</h3>
+                    <p class="text-gray-600">Budget-friendly packages designed for small businesses and local shops.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt text-purple-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Local Business Focus</h3>
+                    <p class="text-gray-600">Strategically tailored solutions for local market dominance and customer acquisition.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-chart-line text-red-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Real Growth Proof</h3>
+                    <p class="text-gray-600">Trackable results with measurable growth in traffic, leads, and sales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="bg-gray-100 section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Our Proven Process</h2>
+                <p class="text-gray-600 mt-4">Simple steps to transform your business online</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-16">
+                <div class="process-step text-center">
+                    <i class="fas fa-search text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">1. Free Audit</h3>
+                    <p class="text-gray-600">Assess your current online presence and identify growth opportunities.</p>
+                </div>
+                <div class="process-step text-center">
+                    <i class="fas fa-bullseye text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">2. Strategy Plan</h3>
+                    <p class="text-gray-600">Custom plan tailored to your business goals and target audience.</p>
+                </div>
+                <div class="process-step text-center">
+                    <i class="fas fa-cogs text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">3. Execution</h3>
+                    <p class="text-gray-600">Implement strategies with precision and ongoing optimization.</p>
+                </div>
+                <div class="process-step text-center">
+                    <i class="fas fa-chart-line text-4xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">4. Growth Results</h3>
+                    <p class="text-gray-600">Track progress and celebrate increased visibility and customer growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="bg-white section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Our Success Stories</h2>
+                <p class="text-gray-600 mt-4">Real results from our digital marketing campaigns</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2bef85f9-a768-41c9-b247-1e4b8c67cb51.png" alt="Before and after comparison of a local clinic's Google Business Profile listing showing improved ranking from page 5 to page 1" class="w-full h-64 object-cover rounded-lg">
+                    <div class="portfolio-overlay">
+                        <h4 class="text-lg font-semibold">Clinic Growth</h4>
+                        <p>Boosted Google ranking 500% and increased appointment bookings.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3bedec27-6101-4073-ad82-d11cb7a69906.png" alt="Social media transformation for a local salon showcasing increased followers and engagement from 100 to 2000 in 6 months" class="w-full h-64 object-cover rounded-lg">
+                    <div class="portfolio-overlay">
+                        <h4 class="text-lg font-semibold">Salon Social Boost</h4>
+                        <p>Expanded audience reach with targeted campaigns and content.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d7995220-5ecf-441b-a7f1-b3786ff4b8de.png" alt="Website redesign for a coaching business with improved SEO leading to 300% more leads and inquiries within 8 weeks" class="w-full h-64 object-cover rounded-lg">
+                    <div class="portfolio-overlay">
+                        <h4 class="text-lg font-semibold">Coaching Lead Gen</h4>
+                        <p>New website drove traffic and qualified leads for business growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-gray-100 section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">What Our Clients Say</h2>
+                <p class="text-gray-600 mt-4">Hear from businesses we've helped grow</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card">
+                    <p class="italic mb-4">"Dhandaai by DigitalBloom completely transformed our local shop's online visibility. More customers than ever!"</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b24bf6e-f393-4d46-b51f-d48f73886f56.png" alt="Portrait of Ramesh K, satisfied restaurant owner with digital marketing success" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold">Ramesh K.</p>
+                            <p class="text-gray-500">Local Shop Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="italic mb-4">"Affordable and professional service. Our business grew 70% in just 3 months thanks to their strategies."</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e8a48e8-37e1-474b-ba91-35302a3825d4.png" alt="Portrait of Sunita P, successful salon owner after digital makeover" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold">Sunita P.</p>
+                            <p class="text-gray-500">Salon Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="italic mb-4">"Highly recommend for small businesses. Their website design and SEO brought us new clients constantly."</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a00e471d-d758-4667-b19c-510593528a3b.png" alt="Portrait of Amit S, clinic director with improved online presence" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold">Amit S.</p>
+                            <p class="text-gray-500">Clinic Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Pricing Section -->
+    <section id="pricing" class="bg-white section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Choose the plan that works best for your Indian business growth journey</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="pricing-card bg-gray-50 p-6 rounded-lg text-center shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">🌱 Starter Plan</h3>
+                    <div class="text-4xl font-bold mb-4">₹1,499</div>
+                    <p class="text-gray-500 mb-6">Per Month</p>
+                    <p class="mb-6 text-gray-700 font-medium">Perfect for local shops who just want a simple digital presence.</p>
+                    <ul class="text-left mb-6 space-y-2 text-gray-700">
+                        <li>• Google Business Profile Setup</li>
+                        <li>• 1-Page Simple Website</li>
+                        <li>• Business Listing on Maps</li>
+                        <li>• Basic Creative Post (1 Free)</li>
+                        <li>• Call to Enquire</li>
+                    </ul>
+                    <a href="tel:9161140248" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded">Call Now: 9161140248</a>
+                </div>
+                <!-- Growth Plan -->
+                <div class="pricing-card bg-blue-50 p-6 rounded-lg text-center shadow-md border-2 border-blue-400">
+                    <h3 class="text-2xl font-semibold mb-4">⭐ Growth Plan</h3>
+                    <div class="text-4xl font-bold mb-4">₹1,999</div>
+                    <p class="text-gray-500 mb-6">Per Month (Most Popular)</p>
+                    <p class="mb-6 text-gray-700 font-medium">Complete Business – Local to Online 🚀 Everything you need to take your shop from offline to online growth!</p>
+                    <ul class="text-left mb-6 space-y-2 text-gray-700">
+                        <li>• Google Business Profile Optimization</li>
+                        <li>• Professional Website (for your GMB)</li>
+                        <li>• Business Branding Creatives (3 posts)</li>
+                        <li>• Social Media Integration</li>
+                        <li>• Review & Ranking Boost Guidance</li>
+                        <li>• Free 15-min Visibility Audit</li>
+                        <li>• Priority WhatsApp Support</li>
+                    </ul>
+                    <a href="tel:9161140248" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">Call Now: 9161140248</a>
+                </div>
+                <!-- Pro Plan -->
+                <div class="pricing-card bg-purple-50 p-6 rounded-lg text-center shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">💼 Pro Plan</h3>
+                    <div class="text-4xl font-bold mb-4">₹3,999</div>
+                    <p class="text-gray-500 mb-6">Per Month</p>
+                    <p class="mb-6 text-gray-700 font-medium">For growing businesses who want advanced branding & marketing.</p>
+                    <ul class="text-left mb-6 space-y-2 text-gray-700">
+                        <li>• All Growth Plan Features</li>
+                        <li>• Social Media Marketing Setup (FB + Insta)</li>
+                        <li>• 5 Custom Creative Posts</li>
+                        <li>• SEO Boost for GMB & Website</li>
+                        <li>• Local Ads Strategy (Google/Facebook)</li>
+                        <li>• Dedicated Business Growth Support</li>
+                        <li>• Call to Enquire</li>
+                    </ul>
+                    <a href="tel:9161140248" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded">Call Now: 9161140248</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-100 section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Get in Touch</h2>
+                <p class="text-gray-600 mt-4">Ready to grow your business? Let's start with a free visibility audit!</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <!-- <form action="https://formspree.io/f/movnkbov"POST  class="bg-white p-8 rounded-lg shadow-lg"> -->
+                            <form action="https://formspree.io/f/movnkbov" method="POST" class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="_replyto" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="business-type" class="block text-gray-700 font-semibold mb-2">Business Type</label>
+                            <select id="business-type" name="business-type" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                                <option value="">Select...</option>
+                                <option value="clinic">Clinic</option>
+                                <option value="salon">Salon</option>
+                                <option value="shop">Local Shop</option>
+                                <option value="restaurant">Restaurant</option>
+                                <option value="coaching">Coaching</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg">Submit Request</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Call Now</p>
+                                <p class="text-gray-600"><a href="tel:9161140248" class="text-blue-600 underline">9161140248</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-green-500 text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600"><a href="mailto:harshkamal001@gmail.com" class="text-blue-600 underline">harshkamal001@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-purple-500 text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Business Hours</p>
+                                <p class="text-gray-600">Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Resources Brief -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Resources for Your Business Growth</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="blog-link p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-search text-2xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Customer Acquisition for Local Shops</h3>
+                    <p class="text-gray-600">Learn effective strategies to attract more local customers through digital channels.</p>
+                </div>
+                <div class="blog-link p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-globe text-2xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Website Design Best Practices</h3>
+                    <p class="text-gray-600">Simple tips to create an effective website that converts visitors into customers.</p>
+                </div>
+                <div class="blog-link p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-share-alt text-2xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Social Media for Small Businesses</h3>
+                    <p class="text-gray-600">Harness the power of social media to build your brand and engage with customers.</p>
+                </div>
+            </div>
+            <p class="mt-8 text-gray-600">Visit our blog for more insights and free tips!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dhandaai by DigitalBloom</h3>
+                    <small class="block">Growing small businesses digitally since 2023</small>
+                    <small class="block mt-2">by DigitalBloom</small>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                        <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <p class="mb-2"><i class="fas fa-phone mr-2"></i><a href="tel:9161140248" class="hover:text-blue-400">9161140248</a></p>
+                    <p><i class="fas fa-envelope mr-2"></i><a href="mailto:harshkamal001@gmail.com" class="hover:text-blue-400">harshkamal001@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Dhandaai by DigitalBloom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Elements -->
+    <a href="tel:9161140248" id="cta-float" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-full shadow-lg" title="Call for Free Audit">
+        <i class="fas fa-phone"></i> Free Audit
+    </a>
+    <a href="https://wa.me/9161140248" id="whatsapp-float" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full shadow-lg" title="Chat on WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for all internal links starting with #
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Close mobile menu on link click (for mobile)
+                const menu = document.getElementById('mobile-menu');
+                if (menu && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
