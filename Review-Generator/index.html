@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IndieScrap Kabadiwala - Review Generator</title>
+  <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Container */
+    .container {
+      max-width: 520px;
+      background: #fff;
+      margin: 40px auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      padding: 32px 32px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    /* Header */
+    header {
+      width: 100%;
+      padding: 24px 32px;
+      background: #0f766e;
+      color: white;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 4px 12px rgb(15 118 110 / 0.4);
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.04em;
+      user-select: none;
+    }
+    /* Footer */
+    footer {
+      width: 100%;
+      padding: 16px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #475569;
+      background: #f1f5f9;
+      user-select: none;
+      box-shadow: inset 0 1px 0 #e2e8f0;
+    }
+    /* Review box */
+    .review-box {
+      background: #e0f2fe;
+      border-radius: 14px;
+      padding: 24px 28px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #0f766e;
+      user-select: text;
+      box-shadow: inset 0 0 10px rgb(15 118 110 / 0.15);
+      width: 100%;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .stars {
+      margin-top: 14px;
+      font-size: 1.5rem;
+      color: #fbbf24;
+      user-select: none;
+      align-self: flex-start;
+      filter: drop-shadow(0 0 1px #b45309);
+    }
+    /* Buttons container */
+    .buttons {
+      margin-top: 32px;
+      width: 100%;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 14px 28px;
+      flex: 1 1 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      box-shadow: 0 6px 15px rgb(15 118 110 / 0.3);
+      color: white;
+      background: #0f766e;
+    }
+    button:hover:not(:disabled) {
+      background: #0d9488;
+      box-shadow: 0 8px 20px rgb(13 148 136 / 0.5);
+      transform: translateY(-2px);
+    }
+    button:disabled {
+      background: #94a3b8;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+    /* Icon style */
+    .icon {
+      font-size: 1.4rem;
+      user-select: none;
+    }
+    /* Success message */
+    .success-message {
+      margin-top: 24px;
+      background-color: #dcfce7;
+      color: #166534;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgb(22 101 52 / 0.3);
+      display: none;
+      user-select: none;
+      text-align: center;
+    }
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container {
+        margin: 20px 16px 40px;
+        padding: 28px 20px 40px;
+      }
+      button {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner" aria-label="Page header">
+    IndieScrap Kabadiwala - Review Generator
+  </header>
+
+  <main class="container" role="main" aria-live="polite" aria-atomic="true">
+    <div class="review-box" id="reviewText" tabindex="0" aria-label="Generated review text">
+      <!-- Review text inserted by JS -->
+    </div>
+
+    <div class="buttons">
+      <button id="regenerateBtn" type="button" aria-label="Generate a new review">
+        <span class="icon" aria-hidden="true">🔄</span> Regenerate Review
+      </button>
+      <button id="submitBtn" type="button" aria-describedby="successMessage" aria-label="Copy review and submit">
+        <span class="icon" aria-hidden="true">📋</span> Submit Review
+      </button>
+    </div>
+
+    <div class="success-message" id="successMessage" role="alert" aria-live="assertive">
+      Review copied successfully! Redirecting to Google review page...
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    © 2023 IndieScrap Kabadiwala. Thank you for your feedback!
+  </footer>
+
+  <script>
+    (() => {
+      const reviewTextEl = document.getElementById('reviewText');
+      const submitBtn = document.getElementById('submitBtn');
+      const regenerateBtn = document.getElementById('regenerateBtn');
+      const successMessage = document.getElementById('successMessage');
+
+      // SEO keyword-rich unique reviews for IndieScrap Kabadiwala
+      const reviews = [
+        "IndieScrap Kabadiwala offers the best scrap metal prices in town with fast and reliable pickup service. Their professional team ensures hassle-free scrap selling and environmentally responsible recycling. Highly recommended for all scrap needs!",
+        "I had a great experience with IndieScrap Kabadiwala. They provided transparent pricing for my scrap materials and quick doorstep pickup. Their expert team made scrap selling easy and efficient. Perfect choice for scrap metal and electronic waste recycling!",
+        "For trustworthy scrap collection and top prices, IndieScrap Kabadiwala is my go-to. Their friendly staff and prompt service make recycling scrap metal and other materials simple and rewarding. Excellent customer support and eco-friendly practices!",
+        "IndieScrap Kabadiwala is the best scrap dealer near me! They offer competitive rates for scrap metal and electronic waste, with fast pickup and professional service. I highly recommend them for anyone looking to recycle scrap responsibly.",
+        "Selling scrap has never been easier thanks to IndieScrap Kabadiwala. Their knowledgeable team offers fair prices and quick collection, ensuring a smooth and transparent process. Ideal for scrap metal, electronics, and other recyclable materials.",
+        "I trust IndieScrap Kabadiwala for all my scrap needs. Their efficient pickup service and honest pricing make them stand out. They prioritize customer satisfaction and environmentally safe recycling. A reliable scrap kabadiwala in the area!",
+        "IndieScrap Kabadiwala provides excellent scrap metal recycling services with competitive pricing and fast pickup. Their professional approach and eco-conscious methods make them the best choice for scrap sellers.",
+        "Highly satisfied with IndieScrap Kabadiwala! They offered great prices for my scrap and handled the pickup quickly. Their team is courteous and knowledgeable, making scrap selling a breeze. Strongly recommend for scrap metal and e-waste recycling.",
+        "IndieScrap Kabadiwala is a trusted scrap dealer offering top rates and prompt service. Their commitment to responsible recycling and customer care is unmatched. Perfect for anyone wanting to sell scrap metal or electronic waste hassle-free.",
+        "If you want fair prices and reliable scrap pickup, IndieScrap Kabadiwala is the best option. Their professional team ensures quick service and transparent dealings. I highly recommend them for scrap metal and electronic scrap recycling."
+      ];
+
+      let currentIndex = 0;
+
+      function renderReview(index) {
+        reviewTextEl.textContent = reviews[index];
+        const starsDiv = document.createElement('div');
+        starsDiv.className = 'stars';
+        starsDiv.setAttribute('aria-hidden', 'true');
+        starsDiv.textContent = '★★★★★';
+        reviewTextEl.appendChild(starsDiv);
+        reviewTextEl.focus();
+      }
+
+      regenerateBtn.addEventListener('click', () => {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * reviews.length);
+        } while (newIndex === currentIndex);
+        currentIndex = newIndex;
+        renderReview(currentIndex);
+        successMessage.style.display = 'none';
+        submitBtn.disabled = false;
+        submitBtn.style.cursor = 'pointer';
+      });
+
+      submitBtn.addEventListener('click', () => {
+        const textToCopy = reviews[currentIndex];
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          successMessage.style.display = 'block';
+          submitBtn.disabled = true;
+          submitBtn.style.cursor = 'default';
+
+          setTimeout(() => {
+            window.location.href = 'https://g.page/r/CTJ01NnTY-QKEAE/review';
+          }, 2000);
+        }).catch(() => {
+          alert('Failed to copy review text. Please copy manually and then submit your review.');
+          window.location.href = 'https://g.page/r/CTJ01NnTY-QKEAE/review';
+        });
+      });
+
+      // Initial render
+      renderReview(currentIndex);
+    })();
+  </script>
+</body>
+</html>
