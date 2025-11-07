@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/digitalbloom-tool/(.*)",
-      "destination": "https://tools.dhandaai.com/$1"
+      "destination": "https://tools.dhandaai.com/"
     }
   ]
 }
