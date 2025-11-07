@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/digitalbloom-tool/(.*)", "destination": "https://tools.digitalbloom.in/$1" }
+    { "source": "/digitalbloom-tool/(.*)", "destination": "https://tools.dhandaai.com/$1" }
   ]
 }
