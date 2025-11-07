@@ -1,0 +1,13 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/digitalbloom",
+      "destination": "https://tools.dhandaai.com"
+    },
+    {
+      "source": "/digitalbloom-tool/(.*)",
+      "destination": "https://tools.dhandaai.com/$1"
+    }
+  ]
+}
