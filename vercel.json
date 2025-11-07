@@ -6,7 +6,7 @@
       "destination": "https://tools.dhandaai.com"
     },
     {
-      "source": "/digitalbloom-tool/(.*)",
+      "source": "/digitalbloom/(.*)",
       "destination": "https://tools.dhandaai.com/$1"
     }
   ]
